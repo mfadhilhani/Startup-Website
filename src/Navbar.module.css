@@ -1,0 +1,93 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  margin-right: 74px; /* Jarak antara logo dan elemen di tengah */
+}
+
+.navbarLogo img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbarLinks {
+  display: flex;
+  list-style: none;
+  gap: 20px; /* Jarak antar link di tengah */
+}
+
+.navbarLinks li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.joinBtn {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 74px; /* Jarak antara tombol "Join waitlist" dan elemen di tengah */
+}
+
+.joinBtn:hover {
+  background-color: #7d00c1;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .navbarLinks {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 68px;
+    right: 20px;
+    width: 200px;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+
+  .navbarLinks.mobileActive {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .joinBtn {
+    display: none;
+  }
+}
