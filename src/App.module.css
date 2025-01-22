@@ -136,3 +136,127 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+.featuresSection {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.title3 {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 500;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(346px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card2 {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card2 img {
+  width: 265px; /* Gambar memenuhi lebar kartu */
+  height: 206px; /* Proporsi gambar tetap */
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.card2 h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.card2 p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Variasi ukuran kartu */
+.cardWide {
+  grid-column: span 2; /* Membentang 2 kolom */
+  height: 400px; /* Tinggi sesuai spesifikasi */
+}
+
+.cardSquare {
+  width: 346px;
+  height: 400px;
+  margin: 0 auto; /* Memusatkan kartu secara horizontal */
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .grid2 {
+    grid-template-columns: 1fr; /* 1 kolom */
+  }
+
+  .cardWide {
+    grid-column: span 1; /* Tidak membentang pada layar kecil */
+  }
+}
+
+/* Features Section */
+.featuresSection1 {
+  padding: 50px 20px;
+  background: linear-gradient(180deg, #000000 0%, #2a004e 100%);
+  color: #fff;
+}
+
+.featuresTitle {
+  font-size: 50px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: left; /* Rata kiri */
+  max-width: 800px;
+  margin-left: 50px;
+  margin-right: auto;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureItem {
+  text-align: left; /* Rata kiri */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.featureItem h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.featureItem p {
+  color: #bbb; /* Warna teks isi */
+}
