@@ -4,6 +4,7 @@ import styles from "./App.module.css";
 import app from "./img/App.png";
 import visual from "./img/Visual.png";
 import visual2 from "./img/Visual2.png";
+import clientImage from "./img/Avatar@3x 1.png";
 
 function App() {
   return (
@@ -113,6 +114,26 @@ function App() {
           <div className={styles.featureItem}>
             <h3>Competitor reports</h3>
             <p>Provides insights into competitors' keyword strategies and ranking.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.clientsSection}>
+        <div className={styles.header}>
+          <h2>Our clients</h2>
+          <p>Hear firsthand how our solutions have boosted online success for users like you.</p>
+        </div>
+        <div className={styles.testimonial}>
+          <div className={styles.imageContainer}>
+            <img src={clientImage} alt="Client Testimonial" />
+          </div>
+          <div className={styles.testimonialText}>
+            <p className={styles.quote}>"This product has completely transformed how I manage my projects and deadlines"</p>
+            <p className={styles.author}>
+              Talia Taylor
+              <br />
+              <span>Digital Marketing Director @ Quantum</span>
+            </p>
           </div>
         </div>
       </section>

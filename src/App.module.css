@@ -231,9 +231,9 @@ body {
   line-height: 1.4;
   margin-bottom: 30px;
   font-weight: 600;
-  text-align: left; /* Rata kiri */
+  text-align: left;
   max-width: 800px;
-  margin-left: 50px;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -259,4 +259,73 @@ body {
 
 .featureItem p {
   color: #bbb; /* Warna teks isi */
+}
+
+.clientsSection {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #bdbdbd;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 100px;
+}
+
+.imageContainer img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.testimonialText {
+  max-width: 500px;
+  text-align: left;
+}
+
+.quote {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.author span {
+  font-size: 14px;
+  color: #bdbdbd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonialText {
+    text-align: center;
+  }
 }
