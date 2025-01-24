@@ -13,7 +13,7 @@ function App() {
       <main className={styles.hero}>
         {/* Hero Section */}
         <div className={styles.heroContent}>
-          <span className={styles.badge}>NEW 🚀 Latest integration just arrived</span>
+          <span className={styles.badge}>NEW Latest integration just arrived</span>
           <h1 className={styles.title}>Boost your rankings with AI.</h1>
           <p className={styles.subtitle}>Elevate your site’s visibility effortlessly with AI, where smart technology meets user-friendly SEO tools.</p>
           <button className={styles.startBtn}>Start for free</button>
@@ -134,6 +134,65 @@ function App() {
               <br />
               <span>Digital Marketing Director @ Quantum</span>
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.pricingSection}>
+        <h2 className={styles.title4}>Pricing</h2>
+        <p className={styles.description}>Choose the right plan to meet your SEO needs and start optimizing today.</p>
+
+        <div className={styles.toggleWrapper}>
+          <label className={styles.toggle}>
+            <input type="checkbox" />
+            <span className={styles.slider}></span>
+          </label>
+        </div>
+
+        <div className={styles.cardsWrapper}>
+          {/* Card 1 */}
+          <div className={`${styles.card4} ${styles.card}`}>
+            <h3 className={styles.cardTitle}>Pricing</h3>
+            <p className={styles.price}>$28/mo</p>
+            <ul className={styles.features}>
+              <li>Keyword optimization</li>
+              <li>Automated meta tags</li>
+              <li>SEO monitoring</li>
+              <li>Monthly reports</li>
+            </ul>
+            <button className={styles.button}>Join waitlist</button>
+          </div>
+
+          {/* Card 2 */}
+          <div className={`${styles.card4} ${styles.highlighted} ${styles.card}`}>
+            <h3 className={styles.cardTitle}>Pro</h3>
+            <p className={styles.price}>$78/mo</p>
+            <ul className={styles.features}>
+              <li>Keyword optimization</li>
+              <li>Automated meta tags</li>
+              <li>SEO monitoring</li>
+              <li>Monthly reports</li>
+              <li>Content suggestions</li>
+              <li>Link optimization</li>
+            </ul>
+            <button className={styles.button}>Join waitlist</button>
+          </div>
+
+          {/* Card 3 */}
+          <div className={`${styles.card4} ${styles.card}`}>
+            <h3 className={styles.cardTitle}>Business</h3>
+            <p className={styles.price}>$148/mo</p>
+            <ul className={styles.features}>
+              <li>Keyword optimization</li>
+              <li>Automated meta tags</li>
+              <li>SEO monitoring</li>
+              <li>Monthly reports</li>
+              <li>Content suggestions</li>
+              <li>Link optimization</li>
+              <li>API integration</li>
+              <li>All-in-one access</li>
+            </ul>
+            <button className={styles.button}>Join waitlist</button>
           </div>
         </div>
       </section>

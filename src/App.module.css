@@ -18,8 +18,8 @@ body {
 }
 
 .badge {
-  background-color: purple;
-  color: white;
+  background-color: #000000;
+  color: #9855ff;
   padding: 5px 10px;
   border-radius: 20px;
   display: inline-block;
@@ -328,4 +328,153 @@ body {
   .testimonialText {
     text-align: center;
   }
+}
+
+.pricingSection {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #0d0d0d, #400080);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.title4 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* Wrapper untuk toggle */
+.toggleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Label utama sebagai toggle */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Lebar toggle */
+  height: 30px; /* Tinggi toggle */
+  cursor: pointer;
+}
+
+/* Input checkbox untuk toggle */
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider untuk toggle */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Warna default */
+  border-radius: 15px; /* Membuat slider berbentuk oval */
+  transition: 0.4s; /* Animasi transisi */
+}
+
+/* Lingkaran indikator */
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 24px; /* Tinggi lingkaran */
+  width: 24px; /* Lebar lingkaran */
+  background-color: white; /* Warna lingkaran */
+  border-radius: 50%; /* Membuat lingkaran sempurna */
+  bottom: 3px;
+  left: 3px;
+  transition: 0.4s; /* Animasi transisi */
+}
+
+/* Efek saat toggle diaktifkan */
+input:checked + .slider {
+  background-color: #400080; /* Warna saat aktif */
+}
+
+input:checked + .slider::before {
+  transform: translateX(30px); /* Geser lingkaran ke kanan */
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card4 {
+  display: flex;
+  flex-direction: column; /* Elemen diatur secara vertikal */
+  justify-content: space-between; /* Elemen diatur untuk mengisi ruang */
+  align-items: flex-start;
+  height: 450px; /* Tinggi tetap untuk semua kartu */
+  background: linear-gradient(to bottom, #1a1a1a, #333);
+  padding: 20px;
+  border-radius: 12px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card4:hover {
+  transform: translateY(-10px);
+}
+
+.highlighted {
+  background: linear-gradient(to bottom, #400080, #1a1a1a);
+}
+
+.card4 h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.features {
+  flex-grow: 1; /* Daftar fitur akan mengisi ruang di tengah */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.button {
+  align-self: stretch; /* Tombol akan melebar mengikuti lebar kartu */
+  margin-top: auto; /* Mendorong tombol ke bagian bawah */
+  padding: 10px;
+  border: none;
+  background-color: #400080;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #5c1aa8;
 }
