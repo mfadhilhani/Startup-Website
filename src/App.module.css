@@ -60,10 +60,11 @@ body {
 }
 
 .dashboardImage {
+  margin-top: 50px;
   width: 100%;
   max-width: 1200px;
   border-radius: 10px;
-  //box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Media Queries for Responsiveness */
@@ -137,6 +138,7 @@ body {
   }
 }
 
+/* featuresSection */
 .featuresSection {
   text-align: center;
   background-color: #000;
@@ -193,6 +195,14 @@ body {
 
 /* Variasi ukuran kartu */
 .cardWide {
+  background-image: url("./img/User Friendly.png");
+  background-size: cover;
+  grid-column: span 2; /* Membentang 2 kolom */
+  height: 400px; /* Tinggi sesuai spesifikasi */
+}
+.cardWide2 {
+  background-image: url("./img/Visual reports.png");
+  background-size: cover;
   grid-column: span 2; /* Membentang 2 kolom */
   height: 400px; /* Tinggi sesuai spesifikasi */
 }
@@ -461,8 +471,8 @@ input:checked + .slider::before {
 }
 
 .button {
-  align-self: stretch; /* Tombol akan melebar mengikuti lebar kartu */
-  margin-top: auto; /* Mendorong tombol ke bagian bawah */
+  align-self: stretch;
+  margin-top: auto;
   padding: 10px;
   border: none;
   background-color: #400080;
@@ -477,4 +487,129 @@ input:checked + .slider::before {
 
 .button:hover {
   background-color: #5c1aa8;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 100px;
+  background: linear-gradient(to bottom, #0d0d0d, rgb(0, 0, 0));
+  color: white;
+}
+
+.pembungkusContainer {
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  display: flex;
+  background-image: url("./img/CTA Section.png");
+  width: 1100px;
+  height: 473px;
+}
+
+.ctacontent {
+  max-width: 600px;
+}
+
+.titlecta {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.formwrappercta {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.emailinputcta {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  background-color: rgba(253, 253, 253, 0);
+  font-size: 1rem;
+}
+
+.joinbtncta {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+.joinbtncta:hover {
+  background-color: #5c1aa8;
+}
+
+.subtextcta {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.footer {
+  position: relative;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 60px 40px;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.brand {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.brandName {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footerLinks {
+  top: 50%;
+  right: 45px;
+  display: flex;
+  gap: 60px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.column h4 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.link:hover {
+  color: #5c1aa8;
 }

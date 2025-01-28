@@ -1,10 +1,13 @@
 //"./App.css";
 import Navbar from "./Navbar";
 import styles from "./App.module.css";
-import app from "./img/App.png";
+import app from "./img/App Wide@2x 1.png";
 import visual from "./img/Visual.png";
 import visual2 from "./img/Visual2.png";
 import clientImage from "./img/Avatar@3x 1.png";
+import logo from "./img/logo.png";
+import { FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 
 function App() {
   return (
@@ -53,14 +56,12 @@ function App() {
           </div>
 
           <div className={`${styles.card2} ${styles.cardWide}`}>
-            <img src="./img/feature2.png" alt="User-friendly dashboard" className={styles.image} />
             <h3>User-friendly dashboard</h3>
             <p>Perform complex SEO audits and optimize with a single click.</p>
           </div>
 
           {/* Baris kedua */}
-          <div className={`${styles.card2} ${styles.cardWide}`}>
-            <img src="./img/feature3.png" alt="Visual reports" className={styles.image} />
+          <div className={`${styles.card2} ${styles.cardWide2}`}>
             <h3>Visual reports</h3>
             <p>Visual insights into your site's performance.</p>
           </div>
@@ -196,6 +197,110 @@ function App() {
           </div>
         </div>
       </section>
+
+      <section className={styles.cta}>
+        <div className={styles.pembungkusContainer}>
+          <div className={styles.ctacontent}>
+            <h1 className={styles.titlecta}>AI-driven SEO for everyone.</h1>
+            <div className={styles.formwrappercta}>
+              <input type="email" placeholder="Your email" className={styles.emailinputcta} />
+              <button className={styles.joinbtncta}>Join waitlist</button>
+            </div>
+            <p className={styles.subtextcta}>No credit card required • 7-days free trial</p>
+          </div>
+        </div>
+      </section>
+
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          {/* Brand Section */}
+          <div className={styles.brand}>
+            <img src={logo} alt="AI Startup Kit Logo" className={styles.logo} />
+            <p className={styles.brandName}>AI Startup Kit</p>
+          </div>
+
+          {/* Footer Links */}
+          <div className={styles.footerLinks}>
+            <div className={styles.column}>
+              <h4>Product</h4>
+              <a href="#" className={styles.link}>
+                Features
+              </a>
+              <a href="#" className={styles.link}>
+                Integration
+              </a>
+              <a href="#" className={styles.link}>
+                Updates
+              </a>
+              <a href="#" className={styles.link}>
+                FAQ
+              </a>
+              <a href="#" className={styles.link}>
+                Pricing
+              </a>
+            </div>
+            <div className={styles.column}>
+              <h4>Company</h4>
+              <a href="#" className={styles.link}>
+                About
+              </a>
+              <a href="#" className={styles.link}>
+                Blog
+              </a>
+              <a href="#" className={styles.link}>
+                Careers
+              </a>
+              <a href="#" className={styles.link}>
+                Manifesto
+              </a>
+              <a href="#" className={styles.link}>
+                Press
+              </a>
+              <a href="#" className={styles.link}>
+                Contract
+              </a>
+            </div>
+            <div className={styles.column}>
+              <h4>Resources</h4>
+              <a href="#" className={styles.link}>
+                Examples
+              </a>
+              <a href="#" className={styles.link}>
+                Community
+              </a>
+              <a href="#" className={styles.link}>
+                Guides
+              </a>
+              <a href="#" className={styles.link}>
+                Docs
+              </a>
+              <a href="#" className={styles.link}>
+                Security
+              </a>
+            </div>
+            <div className={styles.column}>
+              <h4>Legal</h4>
+              <a href="#" className={styles.link}>
+                Privacy
+              </a>
+              <a href="#" className={styles.link}>
+                Terms
+              </a>
+            </div>
+          </div>
+          <div className={styles.footerSocial}>
+            <a href="#" className={styles.socialIcon}>
+              <FaYoutube />
+            </a>
+            <a href="#" className={styles.socialIcon}>
+              <FaX />
+            </a>
+            <a href="#" className={styles.socialIcon}>
+              <FaInstagram />
+            </a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
