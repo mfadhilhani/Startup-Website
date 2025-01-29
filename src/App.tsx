@@ -215,8 +215,21 @@ function App() {
         <div className={styles.footerContent}>
           {/* Brand Section */}
           <div className={styles.brand}>
-            <img src={logo} alt="AI Startup Kit Logo" className={styles.logo} />
-            <p className={styles.brandName}>AI Startup Kit</p>
+            <div className={styles.logoAndName}>
+              <img src={logo} alt="Logo" className={styles.logo} />
+              <p className={styles.brandName}>AI Startup Kit</p>
+            </div>
+            <div className={styles.socialMedia}>
+              <a href="#" className={styles.socialIcon}>
+                <FaYoutube />
+              </a>
+              <a href="#" className={styles.socialIcon}>
+                <FaX />
+              </a>
+              <a href="#" className={styles.socialIcon}>
+                <FaInstagram />
+              </a>
+            </div>
           </div>
 
           {/* Footer Links */}
@@ -257,7 +270,7 @@ function App() {
                 Press
               </a>
               <a href="#" className={styles.link}>
-                Contract
+                Contact
               </a>
             </div>
             <div className={styles.column}>
@@ -287,17 +300,6 @@ function App() {
                 Terms
               </a>
             </div>
-          </div>
-          <div className={styles.footerSocial}>
-            <a href="#" className={styles.socialIcon}>
-              <FaYoutube />
-            </a>
-            <a href="#" className={styles.socialIcon}>
-              <FaX />
-            </a>
-            <a href="#" className={styles.socialIcon}>
-              <FaInstagram />
-            </a>
           </div>
         </div>
       </footer>
