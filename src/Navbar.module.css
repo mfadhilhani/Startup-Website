@@ -31,7 +31,7 @@
   display: flex;
   list-style: none;
   gap: 20px;
-  border: 1px solid white; /* Border tipis di menu */
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
   padding: 10px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.4); /* Transparan khusus menu */
@@ -51,19 +51,24 @@
 
 /* Join Button */
 .joinBtn {
-  background-color: rgba(140, 69, 255, 0.22); /* Transparan warna ungu */
+  background-color: rgb(124, 44, 253); /* Transparan warna ungu */
   color: white;
-  border: 1px solid white; /* Border tipis */
   padding: 8px 15px;
-  border-radius: 5px;
+  border-radius: 16px;
   cursor: pointer;
-  margin-right: 75px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  /* Hapus margin-right */
 }
 
-.joinBtn:hover {
-  background-color: hsla(300, 100%, 64.5%, 0.57); /* Sedikit lebih tebal saat hover */
-  border-color: #d1b3ff;
+.buttonwrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px; /* Ruang antara tombol dan garis luar */
+  background: transparent; /* Latar belakang transparan */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Garis luar tipis */
+  border-radius: 16px; /* Sudut melengkung untuk garis luar */
+  margin-right: 75px; /* Margin hanya untuk wrapper */
 }
 
 /* Hamburger Menu */
