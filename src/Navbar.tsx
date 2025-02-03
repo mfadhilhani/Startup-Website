@@ -36,14 +36,16 @@ const Navbar: React.FC = () => {
       </ul>
 
       {/* Join Button */}
-      <div className={styles.buttonwrapper}>
-        <button className={styles.joinBtn}>Join Waitlist</button>
-      </div>
-      {/* Hamburger Icon */}
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
-        <span className={styles.bar}></span>
+      <div className={styles.rightMenu}>
+        <div className={styles.buttonwrapper}>
+          <button className={styles.joinBtn}>Join Waitlist</button>
+        </div>
+        {/* Hamburger Icon */}
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </div>
       </div>
     </nav>
   );

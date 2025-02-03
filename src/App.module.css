@@ -237,12 +237,10 @@ body {
 
 /* Responsif */
 @media screen and (max-width: 768px) {
-  .grid2 {
-    grid-template-columns: 1fr; /* 1 kolom */
-  }
-
-  .cardWide {
-    grid-column: span 1; /* Tidak membentang pada layar kecil */
+  .cardSquare .cardWide2 .cardWide {
+    width: 360px;
+    height: 400px;
+    grid-column: span 2;
   }
 }
 
@@ -286,6 +284,56 @@ body {
 
 .featureItem p {
   color: #bbb;
+}
+
+/* Media Query untuk Layar Lebar Maksimal 768px */
+@media screen and (max-width: 768px) {
+  .featuresTitle {
+    font-size: 30px; /* Ukuran font lebih kecil untuk layar kecil */
+    text-align: center; /* Judul rata tengah */
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr; /* Setiap elemen mengambil seluruh lebar */
+    gap: 15px; /* Kurangi jarak antar elemen */
+  }
+
+  .featureItem {
+    margin-left: 45px;
+    font-size: 13px;
+  }
+
+  .featureItem h3 {
+    font-size: 15px;
+  }
+
+  .featureItem p {
+    font-size: 12px;
+  }
+}
+
+/* Media Query untuk Layar Lebar Maksimal 480px */
+@media screen and (max-width: 480px) {
+  .featuresTitle {
+    font-size: 24px; /* Ukuran font lebih kecil */
+    line-height: 1.3; /* Tinggi baris lebih rapat */
+  }
+
+  .featuresGrid {
+    gap: 10px; /* Kurangi jarak antar elemen lebih jauh */
+  }
+
+  .featureItem {
+    font-size: 12px; /* Font lebih kecil pada layar sangat kecil */
+  }
+
+  .featureItem h3 {
+    font-size: 14px;
+  }
+
+  .featureItem p {
+    font-size: 11px;
+  }
 }
 
 /* clientsSection */
@@ -595,6 +643,7 @@ input:checked + .slider::before {
   background-color: #8c45ff;
 }
 
+/* CTA */
 .cta {
   display: flex;
   align-items: center;
@@ -656,6 +705,50 @@ input:checked + .slider::before {
 .subtextcta {
   font-size: 0.9rem;
   color: #ccc;
+}
+
+/* CTA Responsif */
+@media screen and (max-width: 768px) {
+  .pembungkusContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .ctacontent {
+    max-width: 90%;
+    text-align: center;
+  }
+  .formwrappercta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .emailinputcta {
+    border-radius: 8px;
+    width: 272px;
+  }
+
+  .joinbtncta {
+    width: 295px; /* Lebar tombol */
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .titlecta {
+    font-size: 1.8rem;
+  }
+
+  .subtextcta {
+    font-size: 1rem;
+  }
 }
 
 /* Footer */
@@ -746,66 +839,83 @@ input:checked + .slider::before {
 }
 
 /* Media Queries for Responsiveness */
-/* Tablet (width <= 768px) */
+/* Responsif untuk Tablet (<=768px) */
 @media (max-width: 768px) {
-  .brand {
-    flex-direction: row; /* Logo dan brandName bersampingan */
-    justify-content: space-between;
+  .footerContent {
+    flex-direction: column; /* Ubah layout ke kolom */
     align-items: center;
   }
 
-  .socialMedia {
-    margin-top: 20px; /* Sesuaikan jarak di bawah */
-  }
-
-  .footerLinks {
-    gap: 30px; /* Jarak antar kolom lebih kecil */
-  }
-
-  .column h4 {
-    font-size: 0.9rem;
-  }
-
-  .link {
-    font-size: 0.8rem;
-  }
-}
-
-/* Mobile (width <= 480px) */
-@media (max-width: 480px) {
   .brand {
-    flex-direction: column; /* Ubah ke kolom untuk logo dan nama */
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row; /* Logo dan media sosial bersampingan */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Jarak antara logo dan media sosial */
   }
 
-  .logo {
-    width: 30px; /* Logo lebih kecil */
-    height: 30px;
-  }
-
-  .brandName {
-    font-size: 1rem; /* Nama lebih kecil */
+  .logoAndName {
+    display: flex;
+    flex-direction: row; /* Logo dan nama tetap bersampingan */
+    align-items: center;
+    gap: 10px; /* Jarak antara logo dan nama */
   }
 
   .socialMedia {
-    margin-top: 10px;
-    gap: 15px; /* Jarak ikon lebih kecil */
+    flex-direction: row; /* Ikon sosial media tetap horizontal */
+    gap: 15px; /* Jarak antar ikon sosial media */
   }
 
   .footerLinks {
-    flex-direction: column; /* Tumpuk kolom secara vertikal */
-    gap: 20px;
+    margin-top: 20px; /* Beri jarak di bawah logo dan sosial media */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 20px; /* Jarak antar kolom */
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
   }
 
   .column {
-    gap: 15px;
+    align-items: flex-start; /* Teks tetap rata kiri */
+  }
+}
+
+/* Responsif untuk Mobile (<=480px) */
+@media (max-width: 480px) {
+  .footerContent {
+    align-items: center; /* Pusatkan elemen */
   }
 
-  .column h4 {
-    font-size: 0.85rem;
+  .brand {
+    display: flex;
+    flex-direction: row; /* Logo dan sosial media bersampingan */
+    justify-content: space-between; /* Ruang antara logo dan sosial media */
+    width: 100%; /* Lebar penuh */
+    padding: 0 20px; /* Padding kiri dan kanan */
+  }
+
+  .logoAndName {
+    justify-content: flex-start; /* Logo dan nama tetap di awal */
+  }
+
+  .socialMedia {
+    justify-content: flex-end; /* Media sosial berada di kanan */
+    //gap: 10px; /* Jarak antar ikon lebih kecil */
+  }
+
+  .footerLinks {
+    margin-top: 20px; /* Beri jarak di bawah brand */
+    grid-template-columns: 1fr; /* Satu kolom */
+    gap: 15px;
+    text-align: center; /* Teks berada di tengah */
+  }
+
+  .column {
+    align-items: center; /* Pusatkan teks */
   }
 
   .link {
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* Font lebih kecil */
   }
 }
