@@ -1,6 +1,7 @@
 //"./App.css";
 import Navbar from "./Navbar";
 import styles from "./App.module.css";
+import "./App.module.css";
 import app from "./img/App Wide@2x 1.png";
 import visual from "./img/Visual.png";
 import visual2 from "./img/Visual2.png";
@@ -126,6 +127,8 @@ function App() {
         </div>
         <div className={styles.testimonial}>
           <div className={styles.imageContainer}>
+            <div className={styles.horizontallineTop}></div> {/* Garis horizontal atas */}
+            <div className={styles.horizontallineBottom}></div> {/* Garis horizontal bawah */}
             <img src={clientImage} alt="Client Testimonial" />
           </div>
           <div className={styles.testimonialText}>

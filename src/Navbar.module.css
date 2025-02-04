@@ -51,13 +51,12 @@
 
 /* Join Button */
 .joinBtn {
-  background-color: rgb(124, 44, 253); /* Transparan warna ungu */
+  background-color: rgb(124, 44, 253); /* Warna ungu */
   color: white;
   padding: 8px 15px;
   border-radius: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  /* Hapus margin-right */
 }
 
 .buttonwrapper {
@@ -68,7 +67,7 @@
   background: transparent; /* Latar belakang transparan */
   border: 1px solid rgba(255, 255, 255, 0.2); /* Garis luar tipis */
   border-radius: 16px; /* Sudut melengkung untuk garis luar */
-  margin-right: 75px; /* Margin hanya untuk wrapper */
+  margin-right: 20px; /* Margin hanya untuk wrapper */
 }
 
 /* Hamburger Menu */
@@ -87,6 +86,10 @@
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
+  .navbarLogo {
+    margin-left: 20px; /* Sesuaikan margin logo di mobile */
+  }
+
   .navbarLinks {
     display: none;
     flex-direction: column;
@@ -107,6 +110,12 @@
   .rightMenu {
     display: flex;
     align-items: center;
+    gap: 10px; /* Jarak antara tombol "Join Waitlist" dan hamburger menu */
+    margin-right: 20px; /* Sesuaikan margin di mobile */
+  }
+
+  .buttonwrapper {
+    margin-right: 0; /* Hapus margin-right di mobile */
   }
 
   .hamburger {
@@ -114,7 +123,6 @@
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-    margin-right: 20px;
   }
 
   .hamburger .bar {
