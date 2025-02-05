@@ -246,7 +246,7 @@ body {
 
 /* Features Section */
 .featuresSection1 {
-  padding: 50px 20px;
+  padding: 50px 20px 20px;
   background: linear-gradient(to left, #000000 0%, rgb(18, 0, 33) 100%);
   color: #fff;
 }
@@ -900,7 +900,7 @@ input:checked + .slider::before {
 
 /* Responsif untuk Mobile (<=480px) */
 /* Responsif untuk Mobile (<=480px) */
-@media (max-width: 480px) {
+@media (max-width: 280px) {
   .footerContent {
     align-items: center;
   }
