@@ -238,9 +238,13 @@ body {
 /* Responsif */
 @media screen and (max-width: 768px) {
   .cardSquare .cardWide2 .cardWide {
-    width: 360px;
-    height: 400px;
+    width: 260px;
+    height: 300px;
     grid-column: span 2;
+  }
+
+  .featuresSection {
+    margin: 20px;
   }
 }
 
