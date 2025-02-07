@@ -1,16 +1,23 @@
 /* Global Styles */
+:root {
+  --primary-color: #9855ff;
+  --bg-color: #000;
+  --text-color: #fff;
+  --btn-bg: white;
+  --btn-text: black;
+  --btn-hover: rgb(206, 115, 255);
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: white;
-  background: #000000;
+  color: var(--text-color);
+  background: var(--bg-color);
 }
 
-/* Hero Section */
 .hero {
-  position: relative;
   overflow: hidden;
-  padding: 120px 20px;
+  padding: 7.5rem 1.25rem; /* 120px = 7.5rem, 20px = 1.25rem */
   background-image: url("./img/Blur2.png");
   text-align: center;
 }
@@ -18,52 +25,50 @@ body {
 .hero::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: auto 0 0 0; /* Efisien dari left, right, dan bottom */
   height: 60%;
   background: linear-gradient(to top, black, transparent);
-  pointer-events: none;
 }
 
 .heroContent {
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 50rem; /* 800px = 50rem */
+  margin: auto;
 }
 
 .badge {
-  background-color: #000000;
-  color: #9855ff;
-  padding: 5px 10px;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 0.3125rem 0.625rem; /* 5px = 0.3125rem, 10px = 0.625rem */
   border-radius: 20px;
   display: inline-block;
-  margin-bottom: 20px;
-  font-size: 14px;
+  margin-bottom: 1.25rem; /* 20px = 1.25rem */
+  font-size: 0.875rem; /* 14px = 0.875rem */
 }
 
 .title {
-  font-size: 48px;
-  margin: 20px 0;
+  font-size: 3rem; /* 48px = 3rem */
+  margin: 1.25rem 0; /* 20px = 1.25rem */
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px = 1.125rem */
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem; /* 30px = 1.875rem */
 }
 
 .startBtn {
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.625rem 1.25rem; /* 10px = 0.625rem, 20px = 1.25rem */
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem; /* 16px = 1rem */
+  transition: background-color 0.3s;
 }
 
 .startBtn:hover {
-  background-color: rgb(206, 115, 255);
+  background-color: var(--btn-hover);
 }
 
 /* Dashboard Section */
@@ -149,7 +154,7 @@ body {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 250px) {
   .grid {
     grid-template-columns: 1fr;
   }
@@ -236,7 +241,7 @@ body {
 }
 
 /* Responsif */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 250px) {
   .cardSquare .cardWide2 .cardWide {
     width: 260px;
     height: 300px;
@@ -290,7 +295,6 @@ body {
   color: #bbb;
 }
 
-/* Media Query untuk Layar Lebar Maksimal 768px */
 @media screen and (max-width: 768px) {
   .featuresTitle {
     font-size: 30px;
@@ -316,8 +320,7 @@ body {
   }
 }
 
-/* Media Query untuk Layar Lebar Maksimal 480px */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 250px) {
   .featuresTitle {
     font-size: 24px;
     line-height: 1.3;
@@ -728,7 +731,7 @@ input:checked + .slider::before {
 }
 
 /* CTA Responsif */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 250px) {
   .pembungkusContainer {
     width: 100%;
     height: 558px;
@@ -860,7 +863,7 @@ input:checked + .slider::before {
 
 /* Media Queries for Responsiveness */
 /* Responsif untuk Tablet (<=768px) */
-@media (max-width: 768px) {
+@media (max-width: 250px) {
   .footerContent {
     flex-direction: column;
     align-items: center;
@@ -904,7 +907,7 @@ input:checked + .slider::before {
 
 /* Responsif untuk Mobile (<=480px) */
 /* Responsif untuk Mobile (<=480px) */
-@media (max-width: 280px) {
+@media (max-width: 250px) {
   .footerContent {
     align-items: center;
   }
