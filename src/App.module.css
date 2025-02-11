@@ -461,7 +461,86 @@ body {
 }
 
 /* Responsive Design */
-/* Responsif untuk Tablet (<=768px) */
+/* Responsif untuk Tablet (<=1280px) */
+@media (max-width: 1280px) {
+  .testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 100px;
+  }
+
+  .imageContainer {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: radial-gradient(circle, rgba(64, 0, 128, 0.52), rgba(64, 0, 128, 0) 80%);
+    overflow: visible;
+  }
+
+  .imageContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+  }
+
+  .imageContainer::before,
+  .imageContainer::after {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 2;
+  }
+
+  .imageContainer::before {
+    width: 2px;
+    height: 100%;
+    left: 35px;
+    top: 0;
+  }
+
+  .imageContainer::after {
+    width: 2px;
+    height: 100%;
+    right: 36px;
+    top: 0;
+  }
+
+  .horizontallineTop {
+    top: 72px; /* Posisi garis horizontal atas */
+    right: -550px; /* Memanjang ke kiri hingga ujung teks */
+    left: 5px; /* Memanjang ke kanan sedikit melebihi gambar */
+  }
+
+  .horizontallineBottom {
+    bottom: 72px; /* Posisi garis horizontal bawah */
+    right: -550px; /* Memanjang ke kiri hingga ujung teks */
+    left: 5px; /* Memanjang ke kanan sedikit melebihi gambar */
+  }
+
+  .testimonialText {
+    max-width: 500px;
+    text-align: left;
+    position: relative;
+  }
+
+  .quote {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+/* Responsif untuk handphone (<=250px) */
 @media (max-width: 768px) {
   .testimonial {
     flex-direction: column;
@@ -514,7 +593,7 @@ body {
   }
 }
 
-/*pricingSection */
+/* Pricing Section */
 .pricingSection {
   text-align: center;
   padding: 50px 20px;
@@ -535,7 +614,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* Wrapper untuk toggle */
+/* Toggle (Tetap sama untuk desktop) */
 .toggleWrapper {
   display: flex;
   justify-content: center;
@@ -543,7 +622,6 @@ body {
   margin-bottom: 40px;
 }
 
-/* Label utama sebagai toggle */
 .toggle {
   position: relative;
   display: inline-block;
@@ -552,14 +630,12 @@ body {
   cursor: pointer;
 }
 
-/* Input checkbox untuk toggle */
 .toggle input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* Slider untuk toggle */
 .slider {
   position: absolute;
   top: 0;
@@ -571,7 +647,6 @@ body {
   transition: 0.4s;
 }
 
-/* Lingkaran indikator */
 .slider::before {
   content: "";
   position: absolute;
@@ -584,7 +659,6 @@ body {
   transition: 0.4s;
 }
 
-/* Efek saat toggle diaktifkan */
 input:checked + .slider {
   background-color: #400080;
 }
@@ -593,6 +667,7 @@ input:checked + .slider::before {
   transform: translateX(30px);
 }
 
+/* Cards Wrapper */
 .cardsWrapper {
   display: flex;
   justify-content: center;
@@ -601,6 +676,7 @@ input:checked + .slider::before {
   margin-top: 20px;
 }
 
+/* Card Styles */
 .card4 {
   display: flex;
   flex-direction: column;
@@ -666,7 +742,7 @@ input:checked + .slider::before {
   background-color: #8c45ff;
 }
 
-/* CTA */
+/* CTA Section (Tetap sama) */
 .cta {
   display: flex;
   align-items: center;
@@ -728,6 +804,76 @@ input:checked + .slider::before {
 .subtextcta {
   font-size: 0.9rem;
   color: #ccc;
+}
+
+/* Media Query untuk Mobile (<=480px) */
+@media screen and (max-width: 480px) {
+  /* Pricing Section */
+  .title4 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  /* Toggle: tetap sama, atau bisa disesuaikan jika perlu */
+
+  /* Cards Wrapper: Ubah layout menjadi kolom */
+  .cardsWrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Card */
+  .card4 {
+    width: 90%; /* Memenuhi lebar layar, misalnya 90% */
+    height: auto; /* Biarkan tinggi menyesuaikan konten */
+  }
+
+  /* CTA Section */
+  .pembungkusContainer {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .ctacontent {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .formwrappercta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .emailinputcta {
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .joinbtncta {
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .titlecta {
+    font-size: 1.8rem;
+  }
+
+  .subtextcta {
+    font-size: 0.8rem;
+  }
 }
 
 /* CTA Responsif */
