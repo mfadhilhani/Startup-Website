@@ -742,7 +742,28 @@ input:checked + .slider::before {
   background-color: #8c45ff;
 }
 
-/* CTA Section (Tetap sama) */
+@media (max-width: 1280px) {
+  .cardsWrapper {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+  }
+
+  .card4 {
+    min-height: 380px;
+    padding: 15px;
+  }
+
+  .card4 h3 {
+    font-size: 1.2rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+}
+
+/* CTA Section */
 .cta {
   display: flex;
   align-items: center;
@@ -806,78 +827,8 @@ input:checked + .slider::before {
   color: #ccc;
 }
 
-/* Media Query untuk Mobile (<=480px) */
-@media screen and (max-width: 480px) {
-  /* Pricing Section */
-  .title4 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-  }
-
-  .description {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-  }
-
-  /* Toggle: tetap sama, atau bisa disesuaikan jika perlu */
-
-  /* Cards Wrapper: Ubah layout menjadi kolom */
-  .cardsWrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  /* Card */
-  .card4 {
-    width: 90%; /* Memenuhi lebar layar, misalnya 90% */
-    height: auto; /* Biarkan tinggi menyesuaikan konten */
-  }
-
-  /* CTA Section */
-  .pembungkusContainer {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    padding: 20px;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .ctacontent {
-    max-width: 90%;
-    text-align: center;
-  }
-
-  .formwrappercta {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .emailinputcta {
-    width: 100%;
-    border-radius: 8px;
-    text-align: center;
-  }
-
-  .joinbtncta {
-    width: 100%;
-    border-radius: 8px;
-    text-align: center;
-  }
-
-  .titlecta {
-    font-size: 1.8rem;
-  }
-
-  .subtextcta {
-    font-size: 0.8rem;
-  }
-}
-
 /* CTA Responsif */
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 480px) {
   .pembungkusContainer {
     width: 100%;
     height: 558px;
@@ -1009,7 +960,7 @@ input:checked + .slider::before {
 
 /* Media Queries for Responsiveness */
 /* Responsif untuk Tablet (<=768px) */
-@media (max-width: 250px) {
+@media (max-width: 768px) {
   .footerContent {
     flex-direction: column;
     align-items: center;
@@ -1052,8 +1003,7 @@ input:checked + .slider::before {
 }
 
 /* Responsif untuk Mobile (<=480px) */
-/* Responsif untuk Mobile (<=480px) */
-@media (max-width: 250px) {
+@media (max-width: 480px) {
   .footerContent {
     align-items: center;
   }
@@ -1077,7 +1027,7 @@ input:checked + .slider::before {
 
   .footerLinks {
     margin-top: 20px;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
     text-align: center;
   }
