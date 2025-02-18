@@ -18,7 +18,10 @@ function App() {
         {/* Hero Section */}
         <div className={styles.heroContent}>
           <span className={styles.badge}>NEW Latest integration just arrived</span>
-          <h1 className={styles.title}>Boost your rankings with AI.</h1>
+          <h1 className={styles.title}>
+            Boost your
+            <br /> rankings with AI.
+          </h1>
           <p className={styles.subtitle}>Elevate your site’s visibility effortlessly with AI, where smart technology meets user-friendly SEO tools.</p>
           <button className={styles.startBtn}>Start for free</button>
         </div>
