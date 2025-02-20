@@ -9,6 +9,7 @@ import clientImage from "./img/Avatar@3x 1.png";
 import logo from "./img/logo.png";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
+import Orb from "./Orb";
 
 function App() {
   return (
@@ -27,8 +28,14 @@ function App() {
         </div>
 
         {/* Dashboard Section */}
-        <div className={styles.dashboard}>
-          <img src={app} alt="Dashboard Overview" className={styles.dashboardImage} />
+        <div className={styles.responsiveContainer}>
+          <div className={styles.orbContainer}>
+            <Orb hoverIntensity={0.5} rotateOnHover={true} hue={0} forceHoverState={false} />
+          </div>
+          {/* Konten lain yang berada di atas background */}
+          <div className={styles.dashboard}>
+            <img src={app} alt="Dashboard Overview" className={styles.dashboardImage} />
+          </div>
         </div>
       </main>
 

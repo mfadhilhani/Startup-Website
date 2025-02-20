@@ -16,6 +16,66 @@ body {
   }
 }
 
+.orbContainer {
+  position: absolute;
+  top: -300px;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+} /* Contoh: Hero.module.css */
+.orbContainer {
+  position: absolute;
+  top: -300px;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .orbContainer {
+    top: -200px;
+    left: 100px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .orbContainer {
+    top: -150px;
+    left: 50px;
+  }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+  .orbContainer {
+    top: -100px;
+    left: 20px;
+  }
+}
+
+/* Sesuaikan juga tinggi container jika perlu */
+.responsiveContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  .responsiveContainer {
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsiveContainer {
+    height: 300px;
+  }
+}
+
 .hero {
   position: relative;
   overflow: hidden;
